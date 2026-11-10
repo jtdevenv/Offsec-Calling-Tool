@@ -1,42 +1,18 @@
 # Quick user manual
 
-## Before you start: prerequisites and download
+## First-time setup
 
-- A Windows x64 computer (tested on Windows 11), headphones or speakers, and a
-  writable application folder.
-- Internet access for downloading and your SIP service, plus your own SIP
-  provider's account credentials to configure MicroSIP.
-- Administrator approval and a restart to install the VB-CABLE driver.
-- For downloading from GitHub: [Git for Windows](https://git-scm.com/downloads/win)
-  and [Git LFS](https://git-lfs.com/). After installing them, reopen PowerShell,
-  check `git --version` and `git lfs version`, then run:
+Follow the numbered [README installation steps](README.md#installation) first.
+They cover Windows requirements, Git/Git LFS installation, downloading the actual
+binary files, VB-CABLE installation and MicroSIP configuration.
 
-  ```powershell
-  git lfs install
-  git clone https://github.com/jtdevenv/Offsec-Calling-Tool.git
-  cd Offsec-Calling-Tool
-  git lfs pull
-  git lfs fsck
-  ```
-
-  Sign in when prompted. A private repository requires access on your GitHub
-  account. If the repository is already cloned, run `git lfs pull` and
-  `git lfs fsck` from that folder. If Git reports that `lfs` is not a command,
-  install Git LFS and open a new PowerShell window.
-
-Python, Qt/PySide6, NumPy, sounddevice, FFmpeg and MicroSIP are already bundled
-for executable users; no Python or pip installation is necessary. The VB-CABLE
-driver still needs the separate installation below. Source developers should
-follow [DEVELOPMENT.md](DEVELOPMENT.md#build-from-source) for Python dependencies.
-
-For a complete distribution ZIP, extract the whole folder and proceed below;
-Git and Git LFS are not needed for that route. Avoid using GitHub's ordinary
-source ZIP as a replacement for `git lfs pull`: it may contain pointer files
-instead of the executable and DLLs.
+This manual is the shorter reference for daily use. Python, FFmpeg, MicroSIP and
+the app's libraries are bundled; source-build dependencies are documented in
+[DEVELOPMENT.md](DEVELOPMENT.md#build-from-source).
 
 ## 1. Install VB-CABLE
 
-1. Extract the entire application folder. Keep all files inside `VB-CABLE/`
+1. Open the downloaded application folder (or extract the complete distribution ZIP). Keep all files inside `VB-CABLE/`
    together; the installer needs the companion driver files.
 2. Open `VB-CABLE`, right-click **VBCABLE_Setup_x64.exe**, and choose **Run as
    administrator**. Alternatively, launch the tool and choose **Application >

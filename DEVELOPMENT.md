@@ -33,7 +33,7 @@ Reference: [GitHub large file storage](https://docs.github.com/en/repositories/w
 ## Build from source
 
 First download the complete repository, including Git LFS files, using the
-[README setup steps](README.md#install-and-run). The build reuses the bundled
+[README setup steps](README.md#installation). The build reuses the bundled
 FFmpeg binary, so source alone without its LFS files is insufficient.
 
 Install **Python 3.14.10 x64** from the [official Windows downloads](https://www.python.org/downloads/windows/).
