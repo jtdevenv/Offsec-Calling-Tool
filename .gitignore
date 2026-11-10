@@ -1,0 +1,23 @@
+# Personal library and soundboards
+/media/
+/settings.json
+/settings.tmp
+/qt-layout.json
+/qt-layout.tmp
+# MicroSIP creates account settings, contacts and call logs at runtime
+/MicroSIP/**/*.ini
+/MicroSIP/**/*.db*
+/MicroSIP/**/*.xml
+/MicroSIP/**/*.log
+/MicroSIP/**/recordings/
+# Development and verification output
+**/__pycache__/
+*.pyc
+**/.venv/
+**/.qt-venv/
+**/.release-assets/
+**/build/
+**/dist/
+**/test-temp/
+**/qa-*/
+*.spec
