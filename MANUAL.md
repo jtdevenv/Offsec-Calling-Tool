@@ -1,5 +1,39 @@
 # Quick user manual
 
+## Before you start: prerequisites and download
+
+- A Windows x64 computer (tested on Windows 11), headphones or speakers, and a
+  writable application folder.
+- Internet access for downloading and your SIP service, plus your own SIP
+  provider's account credentials to configure MicroSIP.
+- Administrator approval and a restart to install the VB-CABLE driver.
+- For downloading from GitHub: [Git for Windows](https://git-scm.com/downloads/win)
+  and [Git LFS](https://git-lfs.com/). After installing them, reopen PowerShell,
+  check `git --version` and `git lfs version`, then run:
+
+  ```powershell
+  git lfs install
+  git clone https://github.com/jtdevenv/Offsec-Calling-Tool.git
+  cd Offsec-Calling-Tool
+  git lfs pull
+  git lfs fsck
+  ```
+
+  Sign in when prompted. A private repository requires access on your GitHub
+  account. If the repository is already cloned, run `git lfs pull` and
+  `git lfs fsck` from that folder. If Git reports that `lfs` is not a command,
+  install Git LFS and open a new PowerShell window.
+
+Python, Qt/PySide6, NumPy, sounddevice, FFmpeg and MicroSIP are already bundled
+for executable users; no Python or pip installation is necessary. The VB-CABLE
+driver still needs the separate installation below. Source developers should
+follow [DEVELOPMENT.md](DEVELOPMENT.md#build-from-source) for Python dependencies.
+
+For a complete distribution ZIP, extract the whole folder and proceed below;
+Git and Git LFS are not needed for that route. Avoid using GitHub's ordinary
+source ZIP as a replacement for `git lfs pull`: it may contain pointer files
+instead of the executable and DLLs.
+
 ## 1. Install VB-CABLE
 
 1. Extract the entire application folder. Keep all files inside `VB-CABLE/`
@@ -78,3 +112,6 @@ and any ongoing call running.
   are rejected; very large decoded clips must be split into shorter files.
 - **Startup fails:** extract the whole folder, including `_qt_internal`. Do not
   copy only the executable. Avoid running two copies against the same library.
+- **Executable is tiny, is text, or will not run after cloning:** run `git lfs pull`
+  followed by `git lfs fsck` in the repository. Check that you are signed in to a
+  GitHub account with repository access and that the download completed.

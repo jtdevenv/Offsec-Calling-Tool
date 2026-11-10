@@ -32,15 +32,37 @@ Reference: [GitHub large file storage](https://docs.github.com/en/repositories/w
 
 ## Build from source
 
-Use Python **3.14.10 x64**. From the root of this folder:
+First download the complete repository, including Git LFS files, using the
+[README setup steps](README.md#install-and-run). The build reuses the bundled
+FFmpeg binary, so source alone without its LFS files is insufficient.
 
-```
-python -m venv qt-client/.qt-venv
+Install **Python 3.14.10 x64** from the [official Windows downloads](https://www.python.org/downloads/windows/).
+Use the full installer with pip and the Python launcher. Open a new PowerShell
+window and run `py -3.14 --version`; it must report **Python 3.14.10**, because
+the release build script checks that exact version.
+
+The virtual environment will install these pinned application dependencies:
+
+- PySide6-Essentials 6.12.0 and shiboken6 6.12.0 (Qt Widgets).
+- NumPy 2.5.4 and sounddevice 0.5.6 (audio processing and device playback).
+- Their dependencies, including CFFI, are resolved by pip.
+- PyInstaller 6.22.3 is required only to build the executable.
+
+From the repository root in PowerShell:
+
+```powershell
+py -3.14 -m venv qt-client/.qt-venv
 qt-client/.qt-venv/Scripts/python.exe -m pip install -r qt-client/requirements-qt.txt pyinstaller==6.22.3
+qt-client/.qt-venv/Scripts/python.exe -m pip check
 qt-client/.qt-venv/Scripts/python.exe qt-client/qt_app.py
 qt-client/.qt-venv/Scripts/python.exe -m unittest discover -s qt-client/tests -v
 qt-client/.qt-venv/Scripts/python.exe qt-client/build_qt.py
 ```
+
+Internet access is needed for pip installation. Activating the environment is
+optional because these commands address its Python executable directly. The
+VB-CABLE installation and MicroSIP microphone configuration in
+[MANUAL.md](MANUAL.md) also apply when running from source.
 
 Use a short checkout path or enable Windows long-path support if pip reports a
 long filename error while installing Qt. Builds isolate PATH so unrelated ICU

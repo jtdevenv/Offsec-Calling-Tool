@@ -852,8 +852,8 @@
     "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e"
   },
   "DEVELOPMENT.md": {
-    "bytes": 2317,
-    "sha256": "1b8444e5e0344d2b0de2706b60f050282c2547ba9f6080d3750699db2d790b8b"
+    "bytes": 3528,
+    "sha256": "4d282b5361cc054e7db62a991c3c858094c19ab04af29c027ce8c000e9a21196"
   },
   "licenses/cffi/cffi-2.1.1.dist-info/licenses/LICENSE": {
     "bytes": 1123,
@@ -1092,8 +1092,8 @@
     "sha256": "b6eea21bbafbaf7a2177e492f1be6b5efc6f4e708b1980773de51cdaa52f8211"
   },
   "MANUAL.md": {
-    "bytes": 4456,
-    "sha256": "494d31a57ab0ea474be0eb1efbf568c61fb65f1ed1fa9a21ce3f3786c2e245d6"
+    "bytes": 6344,
+    "sha256": "bff83f091452dc5b45d7fc3cde3ec9c1b7c88058cc07086563a21c63e3324e81"
   },
   "MicroSIP/MicroSIP-3.22.23/avcodec-60.dll": {
     "bytes": 3215872,
@@ -1224,8 +1224,8 @@
     "sha256": "49dbd741781d91eec7fff39ee97da796f2ea248973fc09cd9af97784210b6459"
   },
   "README.md": {
-    "bytes": 1375,
-    "sha256": "cd09aa976150f6ab460198254657675e3db8af25782fb25ab055c018376fe107"
+    "bytes": 3091,
+    "sha256": "8b41331bdf98a14f7dfad0831902035e213b57f10560d2c2d4501245ac3d3b93"
   },
   "THIRD_PARTY_NOTICES.md": {
     "bytes": 1621,
